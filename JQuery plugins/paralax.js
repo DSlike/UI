@@ -1,6 +1,14 @@
 //  Author: Daniel Votintsev
 //  GitHub: https://github.com/DSlike
 //  Twitter:https://twitter.com/D_Slike
+/*
+Using:
+In JS code write $("yourelementClass").paralax();
+to use default setting Or write $("yourelementClass").paralax({'speed','speedval'}); where 'speedval' is an number from 1 to 10
+
+To set up the inner elements weight just add the data-weight attribute into HTML element. data-weight is to just a number from 1 to 10;
+1 - light weight and fast, 10 - big weight and slow;
+*/
 
 (function( $ ){
 
