@@ -5,7 +5,7 @@
 <script src="https://cdn.rawgit.com/DSlike/UI/master/JQuery%20plugins/paralax.js">
 ```
 
-#Using:
+##Using:
 In JS code write ```javascript $("yourelementClass").paralax(); ```
 to use default setting Or write ```javascript $("yourelementClass").paralax({'speed','speedval'});``` where 'speedval' is an number from 1 to 10
 
