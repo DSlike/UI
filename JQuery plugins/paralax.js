@@ -1,3 +1,7 @@
+//  Author: Daniel Votintsev
+//  GitHub: https://github.com/DSlike
+//  Twitter:https://twitter.com/D_Slike
+
 (function( $ ){
 
   $.fn.paralax = function( options ) {
