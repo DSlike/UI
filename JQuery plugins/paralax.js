@@ -13,24 +13,15 @@ To set up the inner elements weight just add the data-weight attribute into HTML
 (function( $ ){
 
   $.fn.paralax = function( options ) {
-
     var settings = $.extend( {
       'speed':'5'
     }, options);
-
-    var $thisElement= this.attr("class");
-    var position = $("."+$thisElement).position();
+    var $paralaxElement= this.attr("class");
+    var position = $("."+$paralaxElement).position();
     var positionT = position.top;
     var elementH = this.height();
-
-    $(document).ready(function(){
-      paralaxIt();
-    });
-
-    $( window ).scroll(function(){
-      paralaxIt();
-    });
-
+    $(document).ready(function(){paralaxIt();});
+    $( window ).scroll(function(){paralaxIt();});
     function paralaxIt()
     {
       var scrollT = $( window ).scrollTop() - positionT;
@@ -38,12 +29,12 @@ To set up the inner elements weight just add the data-weight attribute into HTML
       if($( window ).scrollTop() + window.innerHeight >= positionT)
       {
         var tp = scrollT*100/blockEnd;
-        $("."+$thisElement).css('background-position', 'center '+(50-(tp/(11-settings.speed)))+'%');
-        $("."+$thisElement).children().each(function(index, element){
+        $("."+$paralaxElement).css('background-position', 'center '+(50-(tp/(11-settings.speed)))+'%');
+        $("."+$paralaxElement).children().each(function(index, element){
           var weight = $(element).attr("data-weight");
           $(element).css("margin-top",(tp/(weight))+"%");
         });
-        $("."+$thisElement).css("filter","blur("+(tp/(11-settings.speed))+"px)")
+        $("."+$paralaxElement).css("filter","blur("+(tp/(11-settings.speed))+"px)")
       }
     }
 
