@@ -1,18 +1,18 @@
-#Paralax JS
+#Parallax JS
 
 ##CDN
 ```javascript
-<script src="https://cdn.rawgit.com/DSlike/UI/master/JQuery%20plugins/paralax.js">
+<script src="https://cdn.rawgit.com/DSlike/UI/master/JQuery%20plugins/JSoftParallax.js">
 ```
 
 ##Using:
 In JS code write
 ```javascript
- $("yourelementClass").paralax();
+ $("yourelementClass").JSoftParallax();
  ```
 to use default setting Or write
 ```javascript
-$("yourelementClass").paralax({'speed','speedval'});
+$("yourelementClass").JSoftParallax({'speed','speedval'});
 ```
  where 'speedval' is an number from -100 to 100
 
