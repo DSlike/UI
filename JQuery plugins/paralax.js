@@ -16,6 +16,7 @@ To set up the inner elements weight just add the data-weight attribute into HTML
     var settings = $.extend( {
       'speed':'5'
     }, options);
+
     var $paralaxElement= this.attr("class");
     var position = $("."+$paralaxElement).position();
     var positionT = position.top;
