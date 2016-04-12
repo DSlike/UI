@@ -20,8 +20,8 @@
   @include checkboxStyling(bgColor, checkColor, borderColor, borderWidth, checkElement, tintLabelText(1/0), labelColor);
 }
 ```
-| Value | EXplanation |
-| --- | ---: |
+| Value | Explanation |
+| --- | --- |
 | bgColor 	         |color of checkBox background|
 | checkColor 	       |color of check element|
 | borderColor        |border color :D|
@@ -38,8 +38,8 @@
   @include radioButStyling(borderRadius, checkElement, checkColor, uncheckElement, uncheckColor);
 }
 ```
-| Value | EXplanation |
-| --- | ---: |
+| Value | Explanation |
+| --- | --- |
 |borderRadius   |curve of radioButton|
 |checkElement   |checked radioBut flag|
 |checkColor     |color of checked flag|
