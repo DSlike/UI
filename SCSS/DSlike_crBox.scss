@@ -1,0 +1,144 @@
+/*
+	CheckBox
+
+ 	Using:
+		<input type="checkbox" class="chbx yourClass" id="someID"><label for="someID"></label>
+	
+	Setting:
+
+	.yourClass
+	{
+		@include checkboxStyling(bgColor, checkColor, borderColor, borderWidth, checkElement, tintLabelText(1/0), labelColor);
+	}
+
+	bgColor 	       - color of checkBox background
+	checkColor 	       - color of check element
+	borderColor        - border color :D
+	borderWidth        - oh, you know what is it
+	checkElement       - flag
+	checkedLabelColor  - 1 if you want to did label text paler, 0 if didn't
+	labelColor         - color of label bound to checkBox
+
+	+ RadioBox
+	.yourClass
+	{
+		The checkboxStyling Mixin + //if you want change the background, tintLabel property of border
+		@include radioButStyling(borderRadius, checkElement, checkColor, uncheckElement, uncheckColor);
+	}
+
+	borderRadius       - curve of radioButton
+	checkElement       - checked radioBut flag
+	checkColor         - color of checked flag
+	uncheckElement     - unchecked radioBut flag
+	uncheckColor       - color of unchecked flag
+
+	IMPORTANT!!
+	If you want to change location of element, just change absolute cordinates of &+label:after
+
+*/
+
+// Default Style
+
+.chbx
+{
+	display: inline-block;
+	visibility: hidden;
+	position: relative;
+	margin-right: 1em;
+	margin-top: 1em;
+
+	& + label
+	{
+		font-size: 12px;
+	}
+	& + label:before
+	{
+		color:black;
+		position:absolute;
+		z-index: 5;
+		margin-left: -1.9em;
+		margin-top: .9em;
+		font: normal normal normal 14px/1 FontAwesome;
+		font-size: 16px;
+		text-rendering: auto;
+	}
+	& + label:after
+	{
+		position: absolute;
+		content:'';
+		z-index: 4;
+		display:block;
+		background-color: white;
+		width:1.5em;
+		height:1.5em;
+		margin-top: -1.3em;
+		border:1px solid tint(#727272, 80%);
+		box-sizing:border-box;
+		font: normal normal normal 14px/1 FontAwesome;
+		font-size: 16px;
+		text-rendering: auto;
+	}
+	&:checked + label:before
+	{
+		content:"\f00c";	
+	}
+	&[type="radio"]
+	{
+		& + label:after
+		{
+			border-radius: 100%;
+		}
+		&:checked + label:before
+		{
+			content:"\f111";
+		}
+	}
+}
+
+// MIXINS
+
+@mixin checkboxStyling($bgColor, $checkColor, $borderColor, $borderWidth, $checkElement, $checkLabelColor, $labelColor)
+{
+	& + label
+	{
+		color:$labelColor;
+		&:after
+		{
+			background-color: $bgColor;
+			border:$borderWidth solid $borderColor;
+		}
+		&:before
+		{
+			color:$checkColor;
+		}
+	}
+	&[type=checkbox]:checked + label:before
+	{
+		content:$checkElement;
+	}
+	&:checked + label
+	{
+		color:$checkLabelColor;
+	}
+}
+
+@mixin radioButStyling($borderRadius, $checked, $checkedColor, $unchecked, $uncheckedColor)
+{
+	&[type="radio"]
+	{
+		& + label:after
+		{
+			border-radius: $borderRadius;
+		}
+		& + label:before
+		{
+			content:$unchecked;
+			color:$uncheckedColor;
+		}
+		&:checked + label:before
+		{
+			content:$checked;
+			color:$checkedColor;
+		}
+	}
+}
