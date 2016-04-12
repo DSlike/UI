@@ -7,30 +7,39 @@
 	margin-top: 0px;
 	width:2px;
 	height:2px;
+	transition: .5s;
 	& + label
 	{
 		font-size: 1em;
 		position: relative;
-	}
-	& + label:before
-	{
-		content:'';
-		color:black;
-		z-index: 5;
-		line-height: 0px;
-		top:50%;
-		left:0px;
-		margin-top: -.5em;
-		vertical-align: middle;
-		font: normal normal normal 14px/1 FontAwesome;
-		font-size: 1.2em;
-		text-rendering: auto;
-		background-color: white;
-		width:.9em;
-		height:.9em;
-		padding: .3em;
-		border:1px solid tint(#727272, 80%);
-		margin-right: .5em;
+		transition: .5s;
+		&::before
+		{
+			content:'';
+			color:black;
+			z-index: 5;
+			line-height: 0px;
+			top:50%;
+			left:0px;
+			margin-top: -.5em;
+			vertical-align: middle;
+			font: normal normal normal 14px/1 FontAwesome;
+			font-size: 1.2em;
+			text-rendering: auto;
+			background-color: white;
+			width:.9em;
+			height:.9em;
+			padding: .3em;
+			border:1px solid tint(#727272, 80%);
+			margin-right: .5em;
+			transition: .5s;
+		}
+		img
+		{
+			height:1em;
+			vertical-align: middle;
+			margin-right: .5em;
+		}
 	}
 	&:checked + label:before
 	{
@@ -48,14 +57,12 @@
 		}
 	}
 }
-
-// MIXINS
-
-@mixin checkboxStyling($bgColor, $checkColor, $borderColor, $borderWidth, $checkElement, $checkLabelColor, $labelColor)
+@mixin checkboxStyling($bgColor, $checkBgColor, $checkColor, $borderColor, $borderWidth, $checkElement, $checkLabelColor, $labelColor)
 {
 	& + label
 	{
 		color:$labelColor;
+		transition: .5s;
 		&:before
 		{
 			color:$checkColor;
@@ -66,6 +73,7 @@
 	&[type=checkbox]:checked + label:before
 	{
 		content:$checkElement;
+		background-color:$checkBgColor;
 	}
 	&:checked + label
 	{
@@ -76,6 +84,7 @@
 {
 	&
 	{
+		transition: .5s;
 		& + label:before
 		{
 			content:$unchecked;
