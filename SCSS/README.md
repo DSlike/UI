@@ -17,12 +17,13 @@
 ```
 .yourClass
 {
-  @include checkboxStyling(bgColor, checkColor, borderColor, borderWidth, checkElement, tintLabelText(1/0), labelColor);
+  @include checkboxStyling(bgColor, $checkBgColor, checkColor, borderColor, borderWidth, checkElement, tintLabelText(1/0), labelColor);
 }
 ```
 | Value | Explanation |
 | --- | --- |
 | bgColor 	         |color of checkBox background|
+| $checkBgColor      |color of checked checkBox background|
 | checkColor 	       |color of check element|
 | borderColor        |border color :D|
 | borderWidth        |oh, you know what is it|
