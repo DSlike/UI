@@ -23,7 +23,7 @@
 | Value | Explanation |
 | --- | --- |
 | bgColor 	         |color of checkBox background|
-| $checkBgColor      |color of checked checkBox background|
+| checkBgColor      |color of checked checkBox background|
 | checkColor 	       |color of check element|
 | borderColor        |border color :D|
 | borderWidth        |oh, you know what is it|
