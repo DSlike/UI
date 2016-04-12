@@ -21,6 +21,7 @@
 }
 ```
 | Value | EXplanation |
+| --- | ---: |
 | bgColor 	         |color of checkBox background|
 | checkColor 	       |color of check element|
 | borderColor        |border color :D|
@@ -38,6 +39,7 @@
 }
 ```
 | Value | EXplanation |
+| --- | ---: |
 |borderRadius   |curve of radioButton|
 |checkElement   |checked radioBut flag|
 |checkColor     |color of checked flag|
