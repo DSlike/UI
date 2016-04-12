@@ -17,7 +17,7 @@
 ```
 .yourClass
 {
-  @include checkboxStyling(bgColor, $checkBgColor, checkColor, borderColor, borderWidth, checkElement, tintLabelText(1/0), labelColor);
+  @include checkboxStyling(bgColor, checkBgColor, checkColor, borderColor, borderWidth, checkElement, tintLabelText(1/0), labelColor);
 }
 ```
 | Value | Explanation |
