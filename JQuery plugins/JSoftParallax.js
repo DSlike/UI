@@ -4,10 +4,12 @@
 /*
 Using:
 In JS code write $("yourelementClass").JSoftParallax();
-to use default setting Or write $("yourelementClass").JSoftParallax({'speed','speedval'}); where 'speedval' is an number from 1 to 100
+to use default setting Or write $("yourelementClass").JSoftParallax({'speed','speedval'}); where 'speedval' is an number from -100 to 100
 
-To set up the inner elements weight just add the data-weight attribute into HTML element. data-weight is to just a number from 1 to 100;
-1 - light weight and fast, 100 - big weight and slow;
+To set up the inner elements weight just add the data-weight attribute into HTML element. data-weight is to just a number from -100 to 100;
+1 - light weight and fast, 100 - big weight and slow.
+
+Logicaly, if you set data-weight attribute <0 element moving to one direction, if data-weight >0 element moving to other direction.
 */
 
 (function( $ ){
@@ -33,7 +35,10 @@ To set up the inner elements weight just add the data-weight attribute into HTML
         $("."+$JSoftParallaxElement).css('background-position', 'center '+(50-(tp/(101-settings.speed)))+'%');
         $("."+$JSoftParallaxElement).children().each(function(index, element){
           var weight = $(element).attr("data-weight");
-          $(element).css("margin-top",(tp/(weight))+"%");
+          if($(element).css("bottom")=="auto")
+            $(element).css("margin-top",(tp/(weight))+"%");
+          else if($(element).css("top")=="auto")
+            $(element).css("margin-bottom",(tp/(0-weight))+"%");
         });
         $("."+$JSoftParallaxElement).css("filter","blur("+(tp/(101-settings.speed))+"px)")
       }
