@@ -1,8 +1,8 @@
 #Parallax JS
 
-##CDN
+##Last version connection link
 ```javascript
-<script src="https://cdn.rawgit.com/DSlike/UI/master/JQuery%20plugins/JSoftParallax.js">
+<script src="https://rawgit.com/DSlike/UI/master/JQuery%20plugins/JSoftParallax.js"></script>
 ```
 
 ##Using:
