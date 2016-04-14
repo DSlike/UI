@@ -13,12 +13,10 @@ Logicaly, if you set data-weight attribute <0 element moving to one direction, i
 */
 
 (function( $ ){
-
   $.fn.JSoftParallax = function( options ) {
     var settings = $.extend( {
       'speed':'5'
     }, options);
-
     var $JSoftParallaxElement= this.attr("class");
     var position = $("."+$JSoftParallaxElement).position();
     var positionT = position.top;
@@ -32,15 +30,12 @@ Logicaly, if you set data-weight attribute <0 element moving to one direction, i
       if($( window ).scrollTop() + window.innerHeight >= positionT)
       {
         var tp = scrollT*100/blockEnd;
-        $("."+$JSoftParallaxElement).css('background-position', 'center '+(50-(tp/(101-settings.speed)))+'%');
+        $("."+$JSoftParallaxElement).css('background-position','center '+(50-(tp/(101-settings.speed)))+'%');
         $("."+$JSoftParallaxElement).children().each(function(index, element){
           var weight = $(element).attr("data-weight");
-          if($(element).css("bottom")=="auto")
-            $(element).css("margin-top",(tp/(weight))+"%");
-          else if($(element).css("top")=="auto")
-            $(element).css("margin-bottom",(tp/(0-weight))+"%");
+          if($(element).css("bottom")=="auto") $(element).css("margin-top",(tp/(weight))+"%");
+          else if($(element).css("top")=="auto") $(element).css("margin-bottom",(tp/(0-weight))+"%");
         });
-        $("."+$JSoftParallaxElement).css("filter","blur("+(tp/(101-settings.speed))+"px)")
       }
     }
   };
