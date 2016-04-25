@@ -55,3 +55,17 @@ $(document).ready(function(){
 ```
 If you didn't setup opacity value - plugin calculate the opacity for all layers on sum = 1
 ```
+Connect the CSS file
+```
+<link href="https://rawgit.com/DSlike/UI/master/JQuery%20plugins/Image%20Effect/layersEffect.css">
+```
+or just write
+```
+.layers-effect-wrapper ._layer
+{
+  opacity:.3;
+  position:absolute;
+  left:0px;
+  top:0px;
+}
+```
