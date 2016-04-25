@@ -18,6 +18,12 @@
     for(var i=0; i<parseInt(settings.additionalImages);i++)
       $thisElement.html($thisElement.html()+'<img src="'+iSrc+'" class="'+settings.imageClass+' _layer" style="opacity:'+opacity+'; ">');
     delete(i);
+    $thisElement.mouseleave(function() {
+      $("._layer").each(function(index, element)
+      {
+          $thisElement.children("._layer").eq(index).css("transform","rotateX(0deg)"+"rotateY(0deg)").css("left","0px").css("top","0px");
+      });
+    });
     $thisElement.mousemove(function(e){
       var pos = $(this).offset();
       var elem_left = pos.left;
