@@ -2,7 +2,7 @@
 #ImageEffect JS
 
 ##Example
-[CodePenk](http://codepen.io/D_Slike/pen/jqvbRW)
+[CodePen](http://codepen.io/D_Slike/pen/jqvbRW)
 
 ##Last version connection link
 ```javascript

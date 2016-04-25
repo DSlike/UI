@@ -1,7 +1,7 @@
 #Parallax JS
 
 ##Example
-[CodePenk](http://codepen.io/D_Slike/pen/dMdjgY)
+[CodePen](http://codepen.io/D_Slike/pen/dMdjgY)
 
 ##Last version connection link
 ```javascript
@@ -29,7 +29,7 @@ Logicaly, if you set data-weight attribute <0 element moving to one direction, i
 #ImageEffect JS
 
 ##Example
-[CodePenk](http://codepen.io/D_Slike/pen/jqvbRW)
+[CodePen](http://codepen.io/D_Slike/pen/jqvbRW)
 
 ##Last version connection link
 ```javascript

@@ -34,15 +34,12 @@
       var eHeight = $thisElement.height();
       xPercent=Xinner*101/eWidth;
       yPercent=Yinner*101/eHeight;
-
       xPercent=50-xPercent;
       if(xPercent>0) xPercent=0-xPercent;
       else if(xPercent<0) xPercent=Math.abs(xPercent);
-
       yPercent=50-yPercent;
       if(yPercent>0) yPercent=0-yPercent;
       else if(yPercent<0) yPercent=Math.abs(yPercent);
-
       $("._layer").each(function(index, element)
       {
         if(settings.rotate=="true")
