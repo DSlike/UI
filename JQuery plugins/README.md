@@ -50,10 +50,10 @@ $(document).ready(function(){
  | move 	       |(true/false) will image move reacting on mouse movements|
  | additionalImages        |count of additional layers of image|
  | imageClass        |class of image to create the layers|
- | opacity       |opacity of layers|
+ | opacity       |opacity of layers or auto|
 
 ```
-If you didn't setup opacity value - plugin calculate the opacity for all layers on sum = 1
+If you setup opacity value on auto - plugin calculate the opacity for all layers on sum = 1
 ```
 Connect the CSS file
 ```
