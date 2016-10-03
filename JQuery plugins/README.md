@@ -15,7 +15,7 @@ In JS code write
  ```
 to use default setting Or write
 ```javascript
-$("yourelementClass").JSoftParallax({'speed','speedval'});
+$("yourelementClass").JSoftParallax({'speed':'speedval'});
 ```
  where 'speedval' is an number from -100 to 100
 
