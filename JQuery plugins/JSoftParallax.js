@@ -23,18 +23,16 @@ Logicaly, if you set data-weight attribute <0 element moving to one direction, i
     var elementH = this.height();
     $(document).ready(function(){  JSoftParallaxIt(); });
     $( window ).scroll(function(){  JSoftParallaxIt(); });
-    function JSoftParallaxIt()
-    {
+    function JSoftParallaxIt(){
       var scrollT = $( window ).scrollTop() - positionT;
       var blockEnd= positionT + elementH;
-      if($( window ).scrollTop() + window.innerHeight >= positionT)
-      {
+      if($( window ).scrollTop() + window.innerHeight >= positionT){
         var tp = scrollT*100/blockEnd;
         $("."+$JSoftParallaxElement).css('background-position','center '+(50-(tp/(101-settings.speed)))+'%');
         $("."+$JSoftParallaxElement).children().each(function(index, element){
           var weight = $(element).attr("data-weight");
-          if($(element).css("bottom")=="auto") $(element).css("margin-top",(tp/(weight))+"%");
-          else if($(element).css("top")=="auto") $(element).css("margin-bottom",(tp/(0-weight))+"%");
+          if($(element).attr("data-direction")=="top") $(element).css("margin-top",(tp/(weight))+"%");
+          else if($(element).attr("data-direction")=="bottom") $(element).css("margin-bottom",(tp/(0-weight))+"%");
         });
       }
     }

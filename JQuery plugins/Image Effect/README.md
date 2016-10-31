@@ -24,8 +24,8 @@ $(document).ready(function(){
 });
  ```
 
- Value | Explanation 
- --- | --- 
+ Value | Explanation
+ --- | ---
  sensivity|sensivity to mouse movements (0-100)
  rotate|(true/false) will image rotate reacting on mouse movements
  move|(true/false) will image move reacting on mouse movements

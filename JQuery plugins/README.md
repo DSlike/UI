@@ -22,7 +22,7 @@ $("yourelementClass").JSoftParallax({'speed','speedval'});
 To set up the inner elements weight just add the data-weight attribute into HTML element. Data-weight is to just a number from -100 to 100;
 0 - ultra light weight and fast, 100 - big weight and slow;
 ```
-Logicaly, if you set data-weight attribute <0 element moving to one direction, if data-weight >0 element moving to other direction.
+To set direction add data-direction attribute into elements (top, bottom).
 ```
 ***
 
